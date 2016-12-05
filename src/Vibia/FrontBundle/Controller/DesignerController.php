@@ -13,7 +13,7 @@ class DesignerController extends Controller
           'catalog' => $_catalog,
           'designer' => $_designer
         );
-        return $this->render('FrontBundle:Designer:index_designer.html.smarty', $params );
+        return $this->render('FrontBundle:Designer:index_designer.html.tpl', $params );
     }
 
 }

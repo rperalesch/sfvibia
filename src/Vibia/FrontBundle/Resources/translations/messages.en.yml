@@ -1,0 +1,11 @@
+frontend:
+    message:       
+        catalog : Catalog
+        products : Products
+        inspiration : Inspiration
+        downloads : Downloads
+        where.to.buy: Where to buy
+        contact: Contact
+        profesional.area: Profesional Area
+        
+idioma : Ingles

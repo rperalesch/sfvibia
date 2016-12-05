@@ -15,7 +15,7 @@ class FamilyController extends Controller
           'collection' => $_collection,
           'family' => $_family
         );
-        return $this->render('FrontBundle:Family:index.html.smarty', $params);
+        return $this->render('FrontBundle:Family:index.html.tpl', $params);
     }
 
 
@@ -26,6 +26,6 @@ class FamilyController extends Controller
           'catalog' => $_catalog,
           'family' => $_family
         );
-        return $this->render('FrontBundle:Family:listFamily.html.smarty', $params);
+        return $this->render('FrontBundle:Family:listFamily.html.tpl', $params);
     }
 }

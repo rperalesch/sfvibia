@@ -10,21 +10,34 @@ use Symfony\Component\Routing\Generator\UrlGeneratorInterface; // Generador de U
 
 class FrontController extends Controller
 {
-    public function indexAction()
+    public function indexAction($_catalog=null)
     {
         
-        $ruta = $this->generateUrl('index_hompage', array('_lang' => 'en', 'catalog'=>'usa'), UrlGeneratorInterface::ABSOLUTE_URL);
+        //$ruta = $this->generateUrl('index_hompage', array('_catalog'=>'usa'), UrlGeneratorInterface::ABSOLUTE_URL);
 
-        $request = $this->getRequest();
-        $lang = $request->request->get('_lang');
-        $catalog = $request->request->get('_catalog');
+//        $request = $this->getRequest();
+//        $lang = $request->request->get('_lang');
+//        $catalog = $request->request->get('_catalog');
+        $ruta = $this->generateUrl('index_hompage', array('catalog'=>$_catalog), UrlGeneratorInterface::ABSOLUTE_URL);
         $params = array(
             'ruta' => $ruta,
-            'lang' => $lang,
-            'catalog' => $catalog,
+//            'lang' => $lang,
+            'catalog' => $_catalog,
             'name'=>'homepage'
             );
-        return $this->render('FrontBundle:Front:index.html.smarty', $params );
+        return $this->render('FrontBundle:Front:index.html.tpl', $params );
+    }
+    
+    public function demoAction() {
+        
+//        $cadena = $this->get('translator')->trans('frontend.message.vabadus');
+        //$request = $this->getRequest();
+//        $request = $this->container->getParameter('locale');
+//print_r($request);
+        //$params = array('lang'=>'es');
+        $params = array();
+        //return $this->render('FrontBundle:Front:demo_homepage.html.twig', $params);
+        return $this->render('FrontBundle:Front:demo_homepage.html.tpl', $params);
     }
     
     public function contactAction() {
@@ -45,7 +58,7 @@ exit(); */
 //            'lang' => $lang,
             'aplicacion' => $aplicacion
             );
-        return $this->render('FrontBundle:Front:contact.html.smarty', $params);
+        return $this->render('FrontBundle:Front:contact.html.tpl', $params);
     }
 
 }

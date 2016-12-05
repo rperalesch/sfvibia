@@ -11,7 +11,7 @@
     </head>
     <body>
         {block body }
-            {include 'file:menu.html.smarty'}
+            {include 'file:menu.html.tpl'}
         {/block}
 
         {block name=javascripts}

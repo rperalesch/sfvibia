@@ -1,0 +1,11 @@
+frontend:
+    message:       
+        catalog : Katalog
+        products : Produkte
+        inspiration : Inspiration
+        downloads : Downloads
+        where.to.buy: Wo kaufen
+        contact: Kontakt
+        profesional.area: Working Area
+        
+idioma : Alemán        

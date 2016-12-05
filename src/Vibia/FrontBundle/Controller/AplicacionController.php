@@ -19,7 +19,7 @@ class AplicacionController extends Controller
             'aplicacion'=>$_aplicacion
             );
         //return $this->render('FrontBundle:Aplicacion:index_aplicacion.html.twig', $params);
-        return $this->render('FrontBundle:Aplicacion:index_aplicacion.html.smarty', $params);
+        return $this->render('FrontBundle:Aplicacion:index_aplicacion.html.tpl', $params);
     }
 
 }

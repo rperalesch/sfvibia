@@ -1,0 +1,9 @@
+frontend:
+    message:       
+        catalog : Catalogo
+        products : Productti
+        inspiration : Ispirazione
+        downloads : Scariga
+        where.to.buy: Dove Acquistare
+        contact: Contatto
+        profesional.area: Area professionale

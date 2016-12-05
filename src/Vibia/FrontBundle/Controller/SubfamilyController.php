@@ -8,7 +8,7 @@ class SubfamilyController extends Controller
 {
     public function listSubfamilyAction()
     {
-        return $this->render('FrontBundle:Subfamily:listSubfamily.html.smarty', array(
+        return $this->render('FrontBundle:Subfamily:listSubfamily.html.tpl', array(
             // ...
         ));
     }

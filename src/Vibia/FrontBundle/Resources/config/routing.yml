@@ -40,12 +40,18 @@ index_aplicaciones:
 
 # hompage   /es/int
 index_hompage:
-    path:     /{_lang}/{_catalog}
-    defaults: { _controller: FrontBundle:Front:index, _lang:es, _catalog:int }
+    path:     /{_locale}/{_catalog}
+    defaults: { _controller: FrontBundle:Front:index, _locale:es, _catalog:int }
     requirements:
-        _lang       : '%v_lang%'
+        _locale       : '%v_lang%'
         _catalog    : '%v_catalog%'
 
+demo_homepage:
+    path:     /{_locale}/demo/valor
+    defaults: { _controller: FrontBundle:Front:demo }
+    requirements:
+        _locale       : '%v_lang%'
+#        _catalog    : '%v_catalog%'
 
 #list_subfamily:
 #    path:     /lang/catalog/subfamily

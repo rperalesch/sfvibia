@@ -1,0 +1,9 @@
+frontend:
+    message:       
+        catalog : Catalogue
+        products : Produitis
+        inspiration : Ispiration
+        downloads : Téléchargements
+        where.to.buy: Où acheter
+        contact: Contact
+        profesional.area: Espace professionnel

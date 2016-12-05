@@ -7,7 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class ArticleController extends Controller
 {
     public function indexAction() {
-        return $this->render("FrontBundle:Article:index.html.smarty");
+        return $this->render("FrontBundle:Article:index.html.tpl");
     }
     
     public function showArticleAction($_lang, $_catalog, $_article_key, $_article_id)
@@ -19,7 +19,7 @@ class ArticleController extends Controller
             'id' => $_article_id
         );
         
-        return $this->render('FrontBundle:Article:show_article.html.smarty', $params);
+        return $this->render('FrontBundle:Article:show_article.html.tpl', $params);
     }
 
 }

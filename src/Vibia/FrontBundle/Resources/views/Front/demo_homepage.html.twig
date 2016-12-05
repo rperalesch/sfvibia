@@ -1,0 +1,37 @@
+{# empty Twig template #}
+{% extends "base.html.twig" %}
+
+{% block title %}FrontBundle:Front:demo{% endblock %}
+
+{% block body %}
+
+<h1>Welcome to the Front:demo contact page</h1>
+
+<h2>Idioma locale = {{ app.request.locale }}</h2>
+
+{{ 'frontend.message.catalog'|trans }}
+<br>
+{{ 'frontend.message.products'|trans }}
+<br>
+{{ 'frontend.message.inspiration'|trans }}
+<br>
+{{ 'frontend.message.downloads'|trans }}
+<br>
+{{ 'frontend.message.where to buy'|trans }}
+<br>
+{{ 'frontend.message.contact'|trans }}
+<br>
+{{ 'frontend.message.profesional area'|trans }}
+
+<h2>{% trans %}New user{% endtrans %}</h2>
+
+
+<ul>
+    <li><a href="#">{{ 'frontend.message.inspiration'|trans }}</a></li>
+    <li><a href="#">{{ 'frontend.message.where.to.buy'|trans }}</a></li>
+    <li><a href="">{{ 'frontend.message.downloads'|trans }}</a></li>
+    <li><a href="">{{ 'frontend.message.contact'|trans }}</a></li>
+    <li><a href="">{{ 'frontend.message.profesional.area'|trans }}</a></li>    
+</ul>
+
+{% endblock %}

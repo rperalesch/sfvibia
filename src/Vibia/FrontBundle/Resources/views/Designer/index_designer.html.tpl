@@ -1,4 +1,4 @@
-{extends 'file:[FrontBundle]/layout.html.smarty'}
+{extends 'file:[FrontBundle]/layout.html.tpl'}
 
 {block title}FrontBundle:Designer:indexDesigner{/block}
 
