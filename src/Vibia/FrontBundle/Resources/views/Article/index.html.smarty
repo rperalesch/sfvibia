@@ -7,9 +7,4 @@
 
     <h1>Welcome to the Article:showArticle page</h1>
 
-    <p>idioma: {$lang}</p>
-    <p>catalgo: {$catalog}</p>
-    <p>Articulo: {$article}</p>
-    <p>ID: {$id}</p>
-
 {/block}

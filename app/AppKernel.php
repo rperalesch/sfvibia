@@ -17,7 +17,6 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new AppBundle\AppBundle(),
             new NoiseLabs\Bundle\SmartyBundle\SmartyBundle(),
-            new Vibia\DemoBundle\DemoBundle(),
             new Vibia\FrontBundle\FrontBundle(),
         );
 

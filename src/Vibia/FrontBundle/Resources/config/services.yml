@@ -17,6 +17,8 @@ parameters:
     
     v_colecciones : colecciones|collections|collezioni|collektionen|collections|collections
 
+    v_article : articulo|article
+    
     pruebavaroable : contenido_de_mi_variable
     
 

@@ -2,22 +2,15 @@
 #    path:     /
 #    defaults: { _controller: FrontBundle:Default:index  }
 
-# hompage   /es/int
-index_hompage:
-    path:     /{_lang}/{_catalog}
-    defaults: { _controller: FrontBundle:Front:index, _lang:es, _catalog:int }
+# Artículos     /es/int/articulo/id_articulo
+show_article:
+    path    :    /{_lang}/{_catalog}/{_article_key}/{_article_id}
+    defaults:   { _controller: FrontBundle:Article:showArticle, _lang:es, _catalog:int }
     requirements:
         _lang       : '%v_lang%'
         _catalog    : '%v_catalog%'
-
-# aplicaciones  /es/int/nomble_de_aplicaciones
-index_aplicaciones:
-    path    :   /{_lang}/{_catalog}/{_aplicacion}
-    defaults:   { _controller: FrontBundle:Aplicacion:index, _lang:es, _catalog:int }
-    requirements:
-        _lang       : '%v_lang%'
-        _catalog    : '%v_catalog%'
-        _aplicacion : '%v_aplicacion.es%|%v_aplicacion.en%|%v_aplicacion.it%|%v_aplicacion.de%|%v_aplicacion.fr%|%v_aplicacion.us%'
+        _article_key : '%v_article%'
+        #_article_id : \+d
 
 # Familia - Colecciones     /es/int/colleciones-nombre_de_familia
 index_family:
@@ -36,24 +29,30 @@ index_designer:
         _lang       : '%v_lang%'
         _catalog    : '%v_catalog%'
 
-
-
-
-
-
-
-list_subfamily:
-    path:     /lang/catalog/subfamily
-    defaults: { _controller: FrontBundle:Subfamily:listSubfamily }
-
-show_article:
-    path:     /lang/catalog/article/{id}
-    defaults: { _controller: FrontBundle:Article:showArticle }
-
-contact:
-    path:     /{_aplicaciones}/contact
-    defaults: { _controller: FrontBundle:Front:contact }
+# aplicaciones  /es/int/nomble_de_aplicaciones
+index_aplicaciones:
+    path    :   /{_lang}/{_catalog}/{_aplicacion}
+    defaults:   { _controller: FrontBundle:Aplicacion:index, _lang:es, _catalog:int }
     requirements:
-#        _locale: '%app.locales%'
-#        _aplicaciones : '%aplicacion.es%|%aplicacion.en%|%aplicacion.it%|%aplicacion.de%|%aplicacion.fr%|%aplicacion.us%'
+        _lang       : '%v_lang%'
+        _catalog    : '%v_catalog%'
+        _aplicacion : '%v_aplicacion.es%|%v_aplicacion.en%|%v_aplicacion.it%|%v_aplicacion.de%|%v_aplicacion.fr%|%v_aplicacion.us%'
+
+# hompage   /es/int
+index_hompage:
+    path:     /{_lang}/{_catalog}
+    defaults: { _controller: FrontBundle:Front:index, _lang:es, _catalog:int }
+    requirements:
+        _lang       : '%v_lang%'
+        _catalog    : '%v_catalog%'
+
+
+#list_subfamily:
+#    path:     /lang/catalog/subfamily
+#    defaults: { _controller: FrontBundle:Subfamily:listSubfamily }
+
+
+#contact:
+#    path:     /{_aplicaciones}/contact
+#    defaults: { _controller: FrontBundle:Front:contact }
 

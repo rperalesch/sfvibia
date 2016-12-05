@@ -18,7 +18,8 @@ class AplicacionController extends Controller
             'catalog' => $_catalog,
             'aplicacion'=>$_aplicacion
             );
-        return $this->render('FrontBundle:Aplicacion:index_aplicacion.html.twig', $params);
+        //return $this->render('FrontBundle:Aplicacion:index_aplicacion.html.twig', $params);
+        return $this->render('FrontBundle:Aplicacion:index_aplicacion.html.smarty', $params);
     }
 
 }

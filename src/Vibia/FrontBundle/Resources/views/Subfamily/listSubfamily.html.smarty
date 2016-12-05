@@ -1,7 +1,11 @@
-{% extends "::base.html.twig" %}
+{extends 'file:[FrontBundle]/layout.html.smarty'}
 
-{% block title %}FrontBundle:Subfamily:listSubfamily{% endblock %}
+{block title}FrontBundle:Subfamily:index{/block}
 
-{% block body %}
-<h1>Welcome to the Subfamily:listSubfamily page</h1>
-{% endblock %}
+{block body}
+
+    {$smarty.block.parent}
+
+    <h1>Welcome to the Subfamily:listSubfamily page</h1>
+
+{/block}

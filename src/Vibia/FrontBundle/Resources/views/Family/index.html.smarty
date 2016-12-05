@@ -1,5 +1,14 @@
-<h1>Family index</h1>
-<p>idioma: {$lang}</p>
-<p>catalgo: {$catalog}</p>
-<p>coleccion: {$collection}</p>
-<p>Aplicación: {$family}</p>
+{extends 'file:[FrontBundle]/layout.html.smarty'}
+
+{block title}FrontBundle:Family:index{/block}
+
+{block body}
+    {$smarty.block.parent}
+
+    <h1>Family index</h1>
+    <p>idioma: {$lang}</p>
+    <p>catalgo: {$catalog}</p>
+    <p>coleccion: {$collection}</p>
+    <p>Aplicación: {$family}</p>
+
+{/block}

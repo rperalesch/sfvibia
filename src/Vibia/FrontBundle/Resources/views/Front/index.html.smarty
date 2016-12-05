@@ -1,18 +1,17 @@
-{* extends 'file:FrontBundle::layout.html.smarty' *}
+{extends 'file:[FrontBundle]/layout.html.smarty'}
 
 {block title}FrontBundle:Front:index{/block}
 
 {block body}
+    {$smarty.block.parent}
+    {* parent()  en twig *}
 
-<h1>Welcome to the Front:index page</h1>
+    <h1>Welcome to the Front:index page</h1>
 
-<a href="{path}index_hompage{/path}">Enlaces </a>
+    <a href="{path}index_hompage{/path}">Enlaces </a>
 
-<p>idioma: {$ruta}</p>
-<p>idioma: {$lang}</p>
-<p>catalgo: {$catalog}</p>
-<p>Aplicación: {$aplicacion}</p>
-
-
+    <p>ruta: {$ruta}</p>
+    <p>idioma: {$lang}</p>
+    <p>catalgo: {$catalog}</p>
 
 {/block}
