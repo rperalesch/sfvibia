@@ -1,0 +1,7 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}FrontBundle:Subfamily:listSubfamily{% endblock %}
+
+{% block body %}
+<h1>Welcome to the Subfamily:listSubfamily page</h1>
+{% endblock %}

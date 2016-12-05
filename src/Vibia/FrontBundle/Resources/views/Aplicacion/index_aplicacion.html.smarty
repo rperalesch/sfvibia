@@ -1,0 +1,15 @@
+{extends 'file:FrontBundle::layout.html.twig'}
+
+{block title}FrontBundle:Aplicacion:index{/block}
+
+{block body}
+
+<h1>Welcome to the Aplicacion:index page</h1>
+
+<p>idioma: {$lang}</p>
+<p>catalgo: {$catalog}</p>
+<p>Aplicación: {$aplicacion}</p>
+
+
+
+{/block}

@@ -1,0 +1,24 @@
+services:
+#    front.example:
+#        class: Vibia\FrontBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+
+parameters:
+    v_lang: en|es|fr|it|de|us
+    v_catalog : int|usa
+    
+    v_aplicacion.es : lamparas-colgantes|lamparas-de-pie|lamparas-de-pared|lamparas-de-bano|lamparas-de-exterior|lamparas-de-sobremesa|lamparas-de-techo #ES
+    v_aplicacion.en : pendant-lighting|floor-lamps|wall-lights|bathroom-lighting|outdoor-lighting|table-lamps|ceiling-lights #EN
+    v_aplicacion.it : lampade-a-sospensione|lampade-da-terra|lampade-da-parete|lampade-per-bagno|lampade-da-esterno|lampade-da-tavolo|lampade-da-soffitto   #IT
+    v_aplicacion.de : pendelleuchte|stehlampen|wandleuchten|badleuchten|aussenleuchten|tischleuchte|deckenleuchten      #DE
+    v_aplicacion.fr : suspension|lampadaire|appliques-murales|luminaires-salle-de-bain|eclairage-exterieur|lampes-de-table |plafonnier        ;FR
+    v_aplicacion.us : pendant-lighting|floor-lamps|wall-lights|bathroom-lighting|outdoor-lighting|table-lamps|ceiling-lights  #US
+    
+    v_colecciones : colecciones|collections|collezioni|collektionen|collections|collections
+
+    pruebavaroable : contenido_de_mi_variable
+    
+
+# idioms : [es,en,it,de,fr,us]
+# aplicaciones : {}

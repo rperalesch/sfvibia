@@ -1,0 +1,59 @@
+#front_homepage :
+#    path:     /
+#    defaults: { _controller: FrontBundle:Default:index  }
+
+# hompage   /es/int
+index_hompage:
+    path:     /{_lang}/{_catalog}
+    defaults: { _controller: FrontBundle:Front:index, _lang:es, _catalog:int }
+    requirements:
+        _lang       : '%v_lang%'
+        _catalog    : '%v_catalog%'
+
+# aplicaciones  /es/int/nomble_de_aplicaciones
+index_aplicaciones:
+    path    :   /{_lang}/{_catalog}/{_aplicacion}
+    defaults:   { _controller: FrontBundle:Aplicacion:index, _lang:es, _catalog:int }
+    requirements:
+        _lang       : '%v_lang%'
+        _catalog    : '%v_catalog%'
+        _aplicacion : '%v_aplicacion.es%|%v_aplicacion.en%|%v_aplicacion.it%|%v_aplicacion.de%|%v_aplicacion.fr%|%v_aplicacion.us%'
+
+# Familia - Colecciones     /es/int/colleciones-nombre_de_familia
+index_family:
+    path    :   /{_lang}/{_catalog}/{_collection}-{_family}
+    defaults:   { _controller: FrontBundle:Family:index, _lang:es, _catalog:int }
+    requirements:
+        _lang       : '%v_lang%'
+        _catalog    : '%v_catalog%'
+        _collection : '%v_colecciones%'
+
+# Diseñadores    /es/int/nombre_del_diseñador
+index_designer:
+    path    :   /{_lang}/{_catalog}/{_designer}
+    defaults:   { _controller: FrontBundle:Designer:index, _lang:es, _catalog:int  }
+    requirements:
+        _lang       : '%v_lang%'
+        _catalog    : '%v_catalog%'
+
+
+
+
+
+
+
+list_subfamily:
+    path:     /lang/catalog/subfamily
+    defaults: { _controller: FrontBundle:Subfamily:listSubfamily }
+
+show_article:
+    path:     /lang/catalog/article/{id}
+    defaults: { _controller: FrontBundle:Article:showArticle }
+
+contact:
+    path:     /{_aplicaciones}/contact
+    defaults: { _controller: FrontBundle:Front:contact }
+    requirements:
+#        _locale: '%app.locales%'
+#        _aplicaciones : '%aplicacion.es%|%aplicacion.en%|%aplicacion.it%|%aplicacion.de%|%aplicacion.fr%|%aplicacion.us%'
+

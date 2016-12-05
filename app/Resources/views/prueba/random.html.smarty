@@ -1,0 +1,11 @@
+{* app/Resources/views/lucky/number.html.twig *}
+
+<h2 style="font-size:22px">Esta es la página de smarty</h2>
+<h1>{$title}</h1>
+
+<ul>
+{foreach $params AS $item}
+    <li>{$item}</li>
+{/foreach}
+</ul>
+
