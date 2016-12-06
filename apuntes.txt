@@ -10,3 +10,6 @@ return new Response($res);
 
 donde User es la entidad
 
+$respository = $this->getDoctrine()->getRepository('Bundel:Metodo');
+
+$user = $repository->find($id);
