@@ -1,3 +1,5 @@
+https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1484159
+
 $em = $this->getDoctrine()->getManager();
 $users = $em->getRepositoy('EMMUserBundle:User')->findAll();
 $res = 'Lista de usuarios: <br>';
