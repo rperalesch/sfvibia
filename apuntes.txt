@@ -1,4 +1,5 @@
 https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1484159
+http://askubuntu.com/questions/701350/qualcomm-atheros-qca9377-wireless-not-working-on-lenovo-with-14-04-3
 
 $em = $this->getDoctrine()->getManager();
 $users = $em->getRepositoy('EMMUserBundle:User')->findAll();
