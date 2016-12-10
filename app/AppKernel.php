@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
             new NoiseLabs\Bundle\SmartyBundle\SmartyBundle(),
             new Vibia\FrontBundle\FrontBundle(),
+            new Vibia\CatalogdbBundle\CatalogdbBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

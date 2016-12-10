@@ -3,6 +3,7 @@ imports:
     - { resource: security.yml }
     - { resource: services.yml }
     - { resource: "@FrontBundle/Resources/config/services.yml" }
+    - { resource: "@CatalogdbBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -44,13 +45,35 @@ twig:
 # Doctrine Configuration
 doctrine:
     dbal:
-        driver:   pdo_mysql
-        host:     "%database_host%"
-        port:     "%database_port%"
-        dbname:   "%database_name%"
-        user:     "%database_user%"
-        password: "%database_password%"
-        charset:  UTF8
+        default_connection: default
+        connections:
+            # aquí configuras la base de datos MySQL
+            default:            
+                driver:   pdo_mysql
+                host:     "%database_host%"
+                port:     "%database_port%"
+                dbname:   "%database_name%"
+                user:     "%database_user%"
+                password: "%database_password%"
+                charset:  UTF8
+                mapping_types: 
+                    enum: string
+            catalog:
+                driver:   pdo_mysql
+                host:     "%database2_host%"
+                port:     "%database2_port%"
+                dbname:   "%database2_name%"
+                user:     "%database2_user%"
+                password: "%database2_password%"
+                charset:  UTF8
+                mapping_types: 
+                    enum: string
+                # ignorar algunas tablas para importar con orm - by rpc
+                #schema_filter: /^(?!crea_lock)/
+                #schema_filter: /^(?!ip_to_country_tmp)/
+                schema_filter: /^(?!(ip_to_country_tmp|own_products_match|vibia_articulos_copy|utils_integrity_crmcontact))/
+                #schema_filter: /^(vibia_articulos|vibia_articulos_ws|countries)$/
+
         # if using pdo_sqlite as your database driver:
         #   1. add the path in parameters.yml
         #     e.g. database_path: "%kernel.root_dir%/data/data.db3"
@@ -59,9 +82,21 @@ doctrine:
         #     path:     "%database_path%"
 
     orm:
-        auto_generate_proxy_classes: "%kernel.debug%"
-        naming_strategy: doctrine.orm.naming_strategy.underscore
-        auto_mapping: true
+        # aquí defines a qué base de datos pertenece cada bundle o cada entidad
+        default_entity_manager: default
+        entity_managers:
+            default:
+                connection: default
+                mappings:
+                    AppBundle:  ~
+                    FrontBundle: ~
+            catalog:
+                connection: catalog
+                mappings:
+                    CatalogdbBundle: ~                
+#        auto_generate_proxy_classes: "%kernel.debug%"
+#        naming_strategy: doctrine.orm.naming_strategy.underscore
+#        auto_mapping: true
 
 # Swiftmailer Configuration
 swiftmailer:

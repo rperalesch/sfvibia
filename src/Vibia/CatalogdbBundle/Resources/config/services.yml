@@ -1,0 +1,4 @@
+services:
+#    catalogdb.example:
+#        class: Vibia\CatalogdbBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

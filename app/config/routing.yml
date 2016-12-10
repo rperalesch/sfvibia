@@ -1,3 +1,19 @@
+catalogdb:
+    resource: "@CatalogdbBundle/Resources/config/routing.yml"
+    prefix:   /
+
+vibia_catalogdb:
+    resource: "@VibiaCatalogdbBundle/Resources/config/routing.yml"
+    prefix:   /
+
+vibia_dbcatalog:
+    resource: "@VibiaDbcatalogBundle/Resources/config/routing.yml"
+    prefix:   /
+
+dbcatalog:
+    resource: "@DbcatalogBundle/Resources/config/routing.yml"
+    prefix:   /
+
 front:
     resource: "@FrontBundle/Resources/config/routing.yml"
     prefix:   /
