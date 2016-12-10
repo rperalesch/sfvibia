@@ -1,0 +1,280 @@
+https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1484159
+http://askubuntu.com/questions/701350/qualcomm-atheros-qca9377-wireless-not-working-on-lenovo-with-14-04-3
+
+$em = $this->getDoctrine()->getManager();
+$users = $em->getRepositoy('EMMUserBundle:User')->findAll();
+$res = 'Lista de usuarios: <br>';
+foreach($users as $user) {
+ $res .= 'usuario:'.$user->getUsername().' -Email:'.$user->getEmail();
+}
+
+//mostrar en el navegador
+return new Response($res);
+
+donde User es la entidad
+
+$respository = $this->getDoctrine()->getRepository('Bundel:Metodo');
+
+$user = $repository->find($id);
+
+****************************************************************************
+Repositorio 
+https://github.com/rperalesch/sfvibia.git
+user: rperalesch
+psw: r**3**...
+
+/***********************************************************************
+
+php vf/app/check.php
+
+run your application
+php app/console server:start
+
+php app/console server:run
+
+http://localhost:8080
+
+
+INSTALAR SYMFONY
+Asegurarse de tener activado date.timezone correcto
+echo 'date.timezone = Europe/Madrid' | sudo tee --append /etc/php5/apache2/php.ini
+ó 
+/etc/php5/apache2/php.ini Y /etc/php5/cli/php.ini
+
+Instalar symfony en linux
+$ sudo mkdir -p /usr/local/bin
+$ sudo curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony
+$ sudo chmod a+x /usr/local/bin/symfony
+
+Crear proyecto nuevo proyecto 
+$ symfony new my_project_name 2.8
+
+Arrancar symfony
+$ cd my_project_name/
+$ php app/console server:run
+
+Ejecutar symfony en el navegador
+http://localhost:8000/
+
+Configurar aplicacion
+http://localhost:8000/config.php
+
+
+/***********************************
+Instlar Smarty Bundle
+$ php composer.phar update noiselabs/smarty-bundle
+ó
+$ composer update noiselabs/smarty-bundle
+
+Habilitar Bundle
+Añadir smarty en el fichero app/config.yml
+    templating:
+        engines: ['twig','smarty']
+Añadir el bundle en app/AppKernel.php
+	new NoiseLabs\Bundle\SmartyBundle\SmartyBundle(),
+
+Para utinizar los ficheros de las plantillas deben tener extension .smarty o .tpl
+Ejemp:
+//app/src/AppBundle/Controller/PruebaController.php
+namespace AppBundle\Controller;
+class PruebaController extends Controller
+{
+    /**
+     * @Route("/numero/random")
+     */        
+    public function randomAction()
+    {
+        $params = $this->UNIDADES;
+        return $this->render('prueba/random.html.smarty', array('params' => $params, 'title'=>'Ejemplo Smarty'));
+    }
+..
+}
+// app/Resources/views/prueba/random.html.smarty
+
+
+///*************************************************************/
+Crear Entidades base de datos
+$ php app/console doctrine:generate:entity
+NombreBundle:NombreEntity
+ó
+php app/console doctrine:generate:entities AppBundle/Entity/Product
+luego llenar los campos
+
+generamos la base de datos con
+$ php app/console doctrine:schema:update --force
+
+*** Generate Entities from an Existing Database ***
+Importamos base de datos en un bundle (Ej AcmeBlogBundle = nombre de bundle)
+php app/console doctrine:mapping:import --force AcmeBlogBundle yml
+
+Generamos entidades -- crear carpeta Entity si no existe dentro de la carpeta Bundle
+php app/console doctrine:generate:entities AcmeBlogBundle
+php app/console doctrine:generate:entities FrontBundle
+
+// para importar desde una base de datos específica en caso de tenern mas de una db
+$ php app/console doctrine:mapping:import --force CatalogdbBundle yml --em=catalog
+
+//php app/console doctrine:mapping:import --help
+// Importar solo alguna entidad/tabla de un bd con muchas tablas
+php app/console doctrine:mapping:import --force CatalogdbBundle yml --em=catalog --filter="BlogPost"
+php app/console doctrine:mapping:import CatalogdbBundle yml --em=catalog --filter="BlogPost"
+
+/*********************************************/
+Crear Bundle
+php app/console generate:bundle --namespace=Vibia/DemoBundle --format=yml
+ó
+si no queremos ninguna pregunta $1=Vibia $2 = Nombre del bundle
+php app/console generate:bundle --namespace=$1/$2Bundle --bundle-name=$2Bundle --dir=src/ --format=yml --no-interaction
+
+Crear Controller, metodos y vistas
+//FrontBundle/Controller/DesignerController.php
+php app/console generate:controller --controller=FrontBundle:Designer --actions="showPostAction:/article/{id} getListAction:/_list-designer/{max}:FrontBundle:Designer:list_designer.html.twig"
+
+php app/console generate:controller --controller=FrontBundle:Front --actions="showAction:/{lang}/{catalog}/:FrontBundle:Front:show_article.html.twig"
+
+Generar ArticleController 
+php app/console generate:controller --controller=FrontBundle:Article --actions="showArticleAction:/{lang}/{catalog}/article/{id}:FrontBundle:Article:show_article.html.twig"
+
+/**************************************************/
+Ejemplo de routing
+# app/config/routing.yml
+article_show:
+  path:     /articles/{_locale}/{year}/{slug}.{_format}
+  defaults: { _controller: AppBundle:Article:show, _format: html }
+  requirements:
+      _locale:  en|fr
+      _format:  html|rss
+      year:     \d+
+
+/articles/en/2010/my-post
+/articles/fr/2010/my-post.rss
+/articles/en/2013/my-latest-post.html
+
+
+/******************************************************/
+
+ESTRUCTURA DE BUNDLES SYMFONY
+- FrontBundle
+
+
+ESTRUCTURA DE URLS VIBIA
+http://www.vibia.com/
+Aplicaciones
+http://www.vibia.com/lamparas-colgantes/
+Colecciones 
+http://www.vibia.com/lampara-colgante-ameba/
+Diseñadores
+http://www.vibia.com/antoni-arola/
+Articulo 
+http://www.vibia.com/en/article/flamingo-1515/?article_id=101239
+
+vibia.com/lang/catalog/family
+vibia.com/lang/catalog/subfamily
+vibia.com/lang/catalgo/designer
+vibia.com/lang/catalgo/article/id
+
+www.vibia.com/es/int/
+
+//****************************************************
+Tipo de routing
+(php, xml, yml, annotation) 
+
+article_show:
+  path:     /articles/{_locale}/{year}/{slug}.{_format}
+  defaults: { _controller: AppBundle:Article:show, _format: html }
+  requirements:
+      _locale:  en|fr
+      _format:  html|rss
+      year:     \d+
+
+
+families :
+	path: 		/{_lang}/{_catalgo}/{_family}
+	defaults:	{ _controller: NameBundle:NameController:NameAction }
+	requirements:
+      		_lang:  en|fr|it|de|us|es
+      		_catalgo:  int|usa
+      		_family:  \[a-zA-Z0-9]*
+
+subfamilies :	
+	path: 		/{_lang}/{_catalgo}/{_subfamily}
+	defaults:	{ _controller: NameBundle:NameController:NameAction }
+	requirements:
+      		_lang:  en|fr|it|de|us|es
+      		_catalgo:  int|usa
+      		_subfamily:  "[a-zA-Z1-9\-_\/]+"
+
+
+designer :	
+	path: 		/{_lang}/{_catalgo}/{_designer}
+	defaults:	{ _controller: NameBundle:NameController:NameAction }
+	requirements:
+      		_lang:  en|fr|it|de|us|es
+      		_catalgo:  int|usa
+      		_designer:  "[a-zA-Z1-9\-_\/]+"
+
+
+
+
+
+
+
+
+
+
+
+
+
+Virtual Host
+Require all granted:
+
+${APACHE_LOG_DIR}/access.log
+ErrorLog ${APACHE_LOG_DIR}/error.log
+CustomLog ${APACHE_LOG_DIR}/access.log
+
+*********************************************
+Instalar SAMBA en debian
+
+apt-get install libcups2 samba samba-common cups
+mv /etc/samba/smb.conf /etc/samba/smb.conf.bak
+
+
+Si no tenemos la ruta creada, entonces lo creamos con
+mkdir -p /home/shares/allusers
+chown -R root:users /home/shares/allusers/
+chmod -R ug+rwx,o+rx-w /home/shares/allusers/
+
+nano /etc/samba/smb.conf
+[global]
+workgroup = WORKGROUP
+server string = Samba Server %v
+netbios name = debian
+security = user
+map to guest = bad user
+dns proxy = no
+
+[allusers]
+  comment = All Users
+  path = /home/shares/allusers
+  force group = users
+  create mask = 0777
+  directory mask = 0777
+  writable = yes
+
+
+sudo service smbd restart
+
+creamos usuario samba
+useradd ramiro -m -G users
+passwd ramiro
+smbpasswd -a tom
+
+Ahora en el equipo windows deberians poder acceder con
+\\192.168.1.100\ramiro ó
+\\debian
+
+
+//////////////////
+instalar mouse en terminal linux
+sudo apt-get install gpm
+sudo /etc/init.d/gpm start
