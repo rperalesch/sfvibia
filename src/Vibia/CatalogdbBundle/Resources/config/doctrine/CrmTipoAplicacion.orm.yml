@@ -1,0 +1,22 @@
+Vibia\CatalogdbBundle\Entity\CrmTipoAplicacion:
+    type: entity
+    table: crm_tipo_aplicacion
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        descripcion:
+            type: text
+            nullable: true
+            length: 65535
+            fixed: false
+        extid:
+            type: integer
+            nullable: true
+            unsigned: false
+    lifecycleCallbacks: {  }

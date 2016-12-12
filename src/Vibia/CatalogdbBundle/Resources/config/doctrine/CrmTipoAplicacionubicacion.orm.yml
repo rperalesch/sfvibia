@@ -1,0 +1,36 @@
+Vibia\CatalogdbBundle\Entity\CrmTipoAplicacionubicacion:
+    type: entity
+    table: crm_tipo_aplicacionubicacion
+    indexes:
+        idaplicacion:
+            columns:
+                - idaplicacion
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        descripcion:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        idaplicacion:
+            type: integer
+            nullable: true
+            unsigned: false
+        idubicacion:
+            type: integer
+            nullable: true
+            unsigned: false
+        unityCode:
+            type: integer
+            nullable: false
+            unsigned: false
+            default: '0'
+            column: unity_code
+    lifecycleCallbacks: {  }

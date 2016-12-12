@@ -1,0 +1,32 @@
+Vibia\CatalogdbBundle\Entity\CrmTipoDesigners:
+    type: entity
+    table: crm_tipo_designers
+    uniqueConstraints:
+        crm_designer_id:
+            columns:
+                - crm_designer_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        crmDesignerId:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: crm_designer_id
+        name:
+            type: string
+            nullable: true
+            length: 500
+            fixed: false
+        descripcion:
+            type: string
+            nullable: true
+            length: 500
+            fixed: false
+    lifecycleCallbacks: {  }

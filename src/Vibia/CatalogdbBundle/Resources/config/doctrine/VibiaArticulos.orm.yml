@@ -1,0 +1,545 @@
+Vibia\CatalogdbBundle\Entity\VibiaArticulos:
+    type: entity
+    table: vibia_articulos
+    indexes:
+        FK_vibia_articulos_designers:
+            columns:
+                - id_designer
+        idcod4:
+            columns:
+                - id_cod4
+        id_familia:
+            columns:
+                - id_familia
+        id_article:
+            columns:
+                - id_article
+        catalogo:
+            columns:
+                - catalogo
+        id_aplicacion:
+            columns:
+                - id_aplicacion
+        efectodeluz:
+            columns:
+                - efectodeluz
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        idArticle:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: id_article
+        idFamilia:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: id_familia
+        idSubfamilia:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: id_subfamilia
+        idDifusor:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: id_difusor
+        idAplicacion:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: id_aplicacion
+        idRal:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: id_ral
+        idDesigner:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: id_designer
+        idCod4:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: id_cod4
+        famOrder:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: fam_order
+        appOrder:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: app_order
+        latestOrder:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: latest_order
+        descripcion:
+            type: text
+            nullable: true
+            length: 65535
+            fixed: false
+        precio:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        observaciones:
+            type: text
+            nullable: true
+            length: 65535
+            fixed: false
+        descuentomaximo:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        max:
+            type: boolean
+            nullable: true
+        alto:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        ancho:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        largo:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        pesobruto:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        pesoneto:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        vol:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        pack:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        claseid:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        accesorioId:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: accesorio_id
+        clasifestadisticaId:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: clasifestadistica_id
+        observacion1:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        observacion2:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        observacion3:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        observacion4:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        observacion5:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        simbip:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        claseaislamiento:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        superficiesinflamables:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        dimensioncorte:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        distanciaminima:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        equiponointegrado:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        reguladorintensidad:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        certificado:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        certificadousa:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: certificadoUSA
+        certificadoadausa:
+            type: boolean
+            nullable: true
+            default: '0'
+            column: certificadoAdaUSA
+        locationusa:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: locationUSA
+        blmini:
+            type: boolean
+            nullable: true
+        bivolt:
+            type: boolean
+            nullable: true
+        efectodeluz:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        wattsprincipal:
+            type: string
+            nullable: true
+            length: 128
+            fixed: false
+        wattsopcional:
+            type: string
+            nullable: true
+            length: 128
+            fixed: false
+        fechacomercializacion:
+            type: string
+            nullable: true
+            length: 128
+            fixed: false
+        instalacion:
+            type: string
+            nullable: true
+            length: 128
+            fixed: false
+        ambiente:
+            type: boolean
+            nullable: true
+        blexiste110:
+            type: boolean
+            nullable: true
+        blnuevo:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        bledincluido:
+            type: boolean
+            nullable: true
+        simbip2:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        crea:
+            type: string
+            nullable: true
+            length: 64
+            fixed: false
+        custom:
+            type: string
+            nullable: true
+            length: 64
+            fixed: false
+        custombrillomate:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+        porcentajeaumentocustom:
+            type: integer
+            nullable: true
+            unsigned: false
+        ecofriendly:
+            type: boolean
+            nullable: true
+        etiquetaefienergetica:
+            type: integer
+            nullable: true
+            unsigned: false
+        intminunits:
+            type: integer
+            nullable: true
+            unsigned: false
+        blnvirtual:
+            type: boolean
+            nullable: true
+        visionluz3d:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+        intensidadluz3d:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+        tipologiaadicional3d:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+        eficiencia:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        sistcoordenadas:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        flujototal:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        valormaximo:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        posicion:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        isolux:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        posicionluminaria:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        rotacionluminaria:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        idsimetria:
+            type: integer
+            nullable: true
+            unsigned: false
+        composicion:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        languageId:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: language_id
+        conexionmatch1:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+        conexionmatch2:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+        dimmable:
+            type: integer
+            nullable: true
+            unsigned: false
+        idpantalla:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: idPantalla
+        metroscable:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        mordaza:
+            type: integer
+            nullable: true
+            unsigned: false
+        lumens:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        lumtotfuenteluz:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        lumwatluminaria:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        lumwatfuenteluz:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        corriente:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        voltsalida:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        modeloequipo:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        catalogo:
+            type: integer
+            nullable: false
+            unsigned: false
+            default: '1'
+        cmsUpdated:
+            type: datetime
+            nullable: true
+            column: cms_updated
+        activePhotoSimulation:
+            type: boolean
+            nullable: false
+            default: '1'
+            column: active_photo_simulation
+        activeProject:
+            type: boolean
+            nullable: false
+            default: '1'
+            column: active_project
+        activeList:
+            type: boolean
+            nullable: false
+            default: '1'
+            column: active_list
+        activeOrders:
+            type: boolean
+            nullable: false
+            default: '1'
+            column: active_orders
+        marcaequipo:
+            type: integer
+            nullable: true
+            unsigned: false
+        tempcolorluminaria:
+            type: integer
+            nullable: true
+            unsigned: false
+        cri:
+            type: integer
+            nullable: true
+            unsigned: false
+        voltentrada:
+            type: integer
+            nullable: true
+            unsigned: false
+        tipofrecuencia:
+            type: integer
+            nullable: true
+            unsigned: false
+        material1:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        material2:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        material3:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        material4:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        ral:
+            type: integer
+            nullable: true
+            unsigned: false
+        idTempcolorled:
+            type: string
+            nullable: true
+            length: 1
+            fixed: false
+            column: id_tempcolorled
+        idTiporegulacion:
+            type: string
+            nullable: true
+            length: 1
+            fixed: false
+            column: id_tiporegulacion
+    lifecycleCallbacks: {  }

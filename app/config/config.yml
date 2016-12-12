@@ -71,7 +71,7 @@ doctrine:
                 # ignorar algunas tablas para importar con orm - by rpc
                 #schema_filter: /^(?!crea_lock)/
                 #schema_filter: /^(?!ip_to_country_tmp)/
-                schema_filter: /^(?!(ip_to_country_tmp|own_products_match|vibia_articulos_copy|utils_integrity_crmcontact))/
+                schema_filter: /^(?!(crea_lock|ip_to_country_tmp|own_products_match|vibia_articulos_copy|utils_integrity_crmcontact))/
                 #schema_filter: /^(vibia_articulos|vibia_articulos_ws|countries)$/
 
         # if using pdo_sqlite as your database driver:

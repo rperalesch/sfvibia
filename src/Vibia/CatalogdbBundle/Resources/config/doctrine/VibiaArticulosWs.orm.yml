@@ -1,0 +1,765 @@
+Vibia\CatalogdbBundle\Entity\VibiaArticulosWs:
+    type: entity
+    table: vibia_articulos_ws
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        idProducto:
+            type: integer
+            nullable: false
+            unsigned: false
+            column: id_producto
+        modelo:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+        descripcion:
+            type: text
+            nullable: true
+            length: 16777215
+            fixed: false
+        precio:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        observaciones:
+            type: text
+            nullable: true
+            length: 16777215
+            fixed: false
+        descuentomaximo:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        idclevel3:
+            type: integer
+            nullable: true
+            unsigned: false
+        clevel3:
+            type: string
+            nullable: true
+            length: 256
+            fixed: false
+        idclevel2:
+            type: integer
+            nullable: true
+            unsigned: false
+        clevel2:
+            type: string
+            nullable: true
+            length: 256
+            fixed: false
+        idclevel1:
+            type: integer
+            nullable: true
+            unsigned: false
+        clevel1:
+            type: string
+            nullable: true
+            length: 256
+            fixed: false
+        idnode:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        ordertag1:
+            type: integer
+            nullable: true
+            unsigned: false
+        ordertag2:
+            type: integer
+            nullable: true
+            unsigned: false
+        zMax:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: z_max
+        zAlto:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: z_alto
+        zAncho:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: z_ancho
+        zLargo:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: z_largo
+        zPesobruto:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: z_pesobruto
+        zPesoneto:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: z_pesoneto
+        zPack:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: z_pack
+        zVol:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: z_vol
+        zClaseid:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_claseid
+        zAccesorioid:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_accesorioid
+        zCodigo4:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_codigo4
+        zIdtipoacabado:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_idtipoacabado
+        zIdtipodifusor:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_idtipodifusor
+        zIdobservacion1:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_idobservacion1
+        zIdobservacion2:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_idobservacion2
+        zIdobservacion3:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_idobservacion3
+        zIdobservacion4:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_idobservacion4
+        zIdobservacion5:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_idobservacion5
+        zIdtipoclasifestadistica:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_idtipoclasifestadistica
+        zIdsimbip:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_idsimbip
+        zIdsimbclaseaislamiento:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_idsimbclaseaislamiento
+        zIdsimbsuperficiesinflamables:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_idsimbsuperficiesinflamables
+        zIdsimbdimensioncorte:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_idsimbdimensioncorte
+        zIdsimbdistanciaminima:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_idsimbdistanciaminima
+        zIdsimbequiponointegrado:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_idsimbequiponointegrado
+        zIdsimbreguladorintensidad:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_idsimbreguladorintensidad
+        zIdsimbcertificado:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_idsimbcertificado
+        zBlnsimbmini:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_blnsimbmini
+        zBivolt:
+            type: boolean
+            nullable: true
+            column: z_bivolt
+        zIdefectodeluz:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_idefectodeluz
+        zIdral:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_idral
+        zIdubicacion1:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_idubicacion1
+        zIdubicacion2:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_idubicacion2
+        zWattsprincipal:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_wattsprincipal
+        zWattsopcional:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_wattsopcional
+        zFechacomercializacion:
+            type: datetime
+            nullable: true
+            column: z_fechacomercializacion
+        zIddesigner:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_iddesigner
+        zBlnwebactive:
+            type: string
+            nullable: true
+            length: 11
+            fixed: false
+            column: z_blnwebactive
+        zIdinstalacion:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_idinstalacion
+        zIdambiente:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_idambiente
+        zVoltios:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_voltios
+        zWatios:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_watios
+        zIdtipobombilla:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_idtipobombilla
+        zBlnsimbexiste110:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_blnsimbexiste110
+        zBlnsimbnuevo:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_blnsimbnuevo
+        zBlnsimbledincluido:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_blnsimbledincluido
+        zIdsimbip2:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_idsimbip2
+        zCrea:
+            type: string
+            nullable: true
+            length: 16
+            fixed: false
+            column: z_crea
+        zCustom:
+            type: string
+            nullable: true
+            length: 16
+            fixed: false
+            column: z_custom
+        zRetiraartweb:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: z_retiraartweb
+        zPorcentajeaumentocustom:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: z_porcentajeaumentocustom
+        zBlnecofriendly:
+            type: string
+            nullable: true
+            length: 11
+            fixed: false
+            column: z_blnecofriendly
+        zEtiquetaefienergetica:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: Z_EtiquetaEfiEnergetica
+        zIntminunits:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: z_intminunits
+        zBlnvirtual:
+            type: boolean
+            nullable: true
+            column: z_blnvirtual
+        zVisionluz3d:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            column: z_visionluz3d
+        zIntensidadluz3d:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            column: z_intensidadluz3d
+        zTipologiaadicional3d:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            column: z_tipologiaadicional3d
+        famOrder:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: fam_order
+        appOrder:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: app_order
+        latestOrder:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: latest_order
+        languageId:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: language_id
+        zIdaplicacionubicacion1:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: z_idaplicacionubicacion1
+        zIdaplicacionubicacion2:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: z_idaplicacionubicacion2
+        zIdaplicacionubicacion3:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: z_idaplicacionubicacion3
+        zIdaplicacionubicacion4:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: z_idaplicacionubicacion4
+        zEficiencia:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_eficiencia
+        zSistcoordenadas:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_sistcoordenadas
+        zFlujototal:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_flujototal
+        zValormaximo:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_valormaximo
+        zPosicion:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_posicion
+        zIsolux:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_isolux
+        zPosicionluminaria:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_posicionluminaria
+        zRotacionluminaria:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: z_rotacionluminaria
+        zIdsimetria:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: z_idsimetria
+        zConexionmatch1:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            column: z_conexionmatch1
+        zConexionmatch2:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            column: z_conexionmatch2
+        zCertificadosusa:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            column: z_certificadosUSA
+        zCertificadoadausa:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            column: z_certificadoAdaUSA
+        zLocationusa:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            column: z_locationUSA
+        zZIdunity3d1:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            column: z_z_idunity3d_1
+        zIdunity3d2:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            column: z_idunity3d_2
+        zIdunity3d3:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            column: z_idunity3d_3
+        zIdunity3d4:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            column: z_idunity3d_4
+        zDialuxSpectrum:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: Z_Dialux_Spectrum
+        zDialuxLtd:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: Z_Dialux_LTD
+        zDialuxIes:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: Z_Dialux_IES
+        zDialuxFoto:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: Z_Dialux_Foto
+        zDialux3d:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: Z_Dialux_3D
+        zDialuxUld:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: Z_Dialux_ULD
+        zDialuxLdt:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: Z_Dialux_LDT
+        zCustombrillomate:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            column: z_custombrillomate
+        zIdpantalla:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: Z_idPantalla
+        zMetroscable:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: Z_MetrosCable
+        zMordazawireflow:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: Z_MordazaWireflow
+        zIdlumensluminaria:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: Z_idLumensLuminaria
+        zIdlumtotfuenteluz:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: Z_idLumTotFuenteLuz
+        zIdlumwatluminaria:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: Z_idLumWatLuminaria
+        zIdlumwatfuenteluz:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: Z_idLumWatFuenteLuz
+        zIdcorriente:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: Z_idCorriente
+        zIdvoltsalida:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: Z_idVoltSalida
+        zIdmodeloequipo:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: Z_idModeloEquipo
+        zIdsubfamilia:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: Z_idSubfamilia
+        subfamilia:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+        fecha:
+            type: datetime
+            nullable: true
+            default: CURRENT_TIMESTAMP
+        zIdmarcaequipo:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: Z_idMarcaEquipo
+        zIdtempcolorluminaria:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: Z_idTempColorLuminaria
+        zIdcri:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: Z_idCRI
+        zIdvoltentrada:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: Z_idVoltEntrada
+        zIdfrecuencia:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: Z_idFrecuencia
+        zIdmateriales:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: Z_idMateriales
+        zIdmateriales2:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: Z_idMateriales2
+        zIdmateriales3:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: Z_idMateriales3
+        zIdmateriales4:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: Z_idMateriales4
+        zIdwebgl3d1:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            column: z_idwebgl3d_1
+        zIdwebgl3d2:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            column: z_idwebgl3d_2
+        zIdwebgl3d3:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            column: z_idwebgl3d_3
+        zIdwebgl3d4:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            column: z_idwebgl3d_4
+    lifecycleCallbacks: {  }

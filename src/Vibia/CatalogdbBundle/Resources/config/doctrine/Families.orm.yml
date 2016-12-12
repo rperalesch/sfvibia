@@ -1,0 +1,48 @@
+Vibia\CatalogdbBundle\Entity\Families:
+    type: entity
+    table: families
+    indexes:
+        id_familia:
+            columns:
+                - id_familia
+        idclevel2:
+            columns:
+                - idclevel2
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        idFamilia:
+            type: integer
+            nullable: false
+            unsigned: false
+            column: id_familia
+        descripcion:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+        latestShow:
+            type: boolean
+            nullable: true
+            default: '0'
+            column: latest_show
+        idclevel2:
+            type: integer
+            nullable: false
+            unsigned: false
+            default: '0'
+        createdAt:
+            type: datetime
+            nullable: true
+            column: created_at
+        updatedAt:
+            type: datetime
+            nullable: true
+            column: updated_at
+    lifecycleCallbacks: {  }

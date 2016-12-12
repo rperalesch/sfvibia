@@ -1,0 +1,20 @@
+Vibia\CatalogdbBundle\Entity\VibiaArticulosLimites:
+    type: entity
+    table: vibia_articulos_limites
+    id:
+        idFamilia:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_familia
+            generator:
+                strategy: IDENTITY
+    fields:
+        maxUnits:
+            type: integer
+            nullable: false
+            unsigned: false
+            default: '0'
+            column: max_units
+    lifecycleCallbacks: {  }
